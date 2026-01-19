@@ -50,7 +50,6 @@ class PlaylistConverter extends Component
         $userId = Auth::id();
         $sessionId = session()->getId();
         $userTokenIdentifier = $userId ? "user:{$userId}" : null;
-        dd($userTokenIdentifier);
 
         $youtubeToken = $userTokenIdentifier 
             ? $youtubeOAuth->getValidAccessToken($userTokenIdentifier) 
